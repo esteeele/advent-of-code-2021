@@ -1,0 +1,38 @@
+length 2 -> 1
+length 3 -> 7 
+length 4 -> 4 
+length 7 -> 8
+
+Start by finding which letters are longs 'aaaa' and which are shorts 'aa'? 
+e.g. a 2 length string must mean both letters are 'shorts' 
+Or just build up from the easiest ones where each letter 'has' to be into a data structure e.g. 1 has shorts on the left 
+
+letter has 
+ - is long/short segment
+ - if short
+    - is left/right 
+ - if long
+    - is top middle or bottom 
+
+Alg 
+
+1 -> which letters are right + short 
+7 -> using 1 which letter is top long 
+4 -> which letter is discounting numbers in one leaves 1 which must be top left and one 
+    which must be middle long 
+9,6,0 -> has 6 size AND
+    9 -> contains all of 4s letters 
+    6 -> contains all of 1s letters 
+    0 -> one that's not these 2 
+
+<solving this far has id'd)> 
+- Top left and right (using the one that's missing in 6 to know order)
+- Bottom left (what's in 9 but not 6)
+- Top (thanks to 7 diff with one)
+
+so 
+- compare 6 and 4 -> discount all known letters whatever is left must be middle long 
+- use 3 to find bottom long (discount everything known)
+- whatever is left must be bottom left (could use 6)
+
+Now ... how to code this? 
