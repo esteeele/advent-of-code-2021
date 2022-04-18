@@ -1,5 +1,7 @@
 mod syntax;
 mod day_nine;
+mod jumbo_jellies;
+
 use std::alloc::System;
 use std::cmp::min;
 use std::collections::HashSet;
@@ -10,5 +12,5 @@ use std::ops::Add;
 use std::os::raw::c_char;
 
 fn main() {
-    syntax::braces_syntax();
+    jumbo_jellies::calc_number_flashes();
 }
