@@ -1,6 +1,8 @@
 mod syntax;
 mod day_nine;
 mod jumbo_jellies;
+mod paths;
+mod folds;
 
 use std::alloc::System;
 use std::cmp::min;
@@ -12,5 +14,17 @@ use std::ops::Add;
 use std::os::raw::c_char;
 
 fn main() {
-    jumbo_jellies::calc_number_flashes();
+    folds::fold_points();
+}
+
+pub fn split_input_file_into_lines(file_location: String) -> Vec<String> {
+    let file = File::open(file_location).unwrap();
+    let reader = BufReader::new(file);
+    let mut lines: Vec<String> = Vec::new();
+
+    for (_, line) in reader.lines().enumerate() {
+        lines.push(line.unwrap());
+    }
+
+    return lines;
 }
