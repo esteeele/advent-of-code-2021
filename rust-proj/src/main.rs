@@ -3,6 +3,8 @@ mod day_nine;
 mod jumbo_jellies;
 mod paths;
 mod folds;
+mod polymers;
+mod risk_factors;
 
 use std::alloc::System;
 use std::cmp::min;
@@ -14,7 +16,9 @@ use std::ops::Add;
 use std::os::raw::c_char;
 
 fn main() {
-    folds::fold_points();
+    // folds::fold_points();
+    // polymers::polymerise();
+    risk_factors::calculate_risk_factor();
 }
 
 pub fn split_input_file_into_lines(file_location: String) -> Vec<String> {
